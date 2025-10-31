@@ -81,6 +81,18 @@
       ]
     }
   },
+  "lsp": {
+    "basepyright": {
+      "settings": {
+        "analysis": {
+          "diagnosticSeverityOverrides": {
+            "reportUnknownMemberType": "none",
+            "reportAny": "none"
+          }
+        }
+      }
+    }
+  },
   // =============== M ===============
   "minimap": {
     "show": "auto"
@@ -105,9 +117,12 @@
   },
   // =============== U ===============
   "ui_font_size": 16,
+  "use_smartcase_search": true,
   // =============== V ===============
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "on_yank"
-  }
+  },
+  // =============== W ===============
+  "wrap_guides": [80, 100]
 }

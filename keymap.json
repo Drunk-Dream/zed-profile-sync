@@ -44,8 +44,8 @@
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
       "space f f": "file_finder::Toggle",
-      "space f m": "editor::Format",
-      "escape": "editor::Format"
+      "space f m": "editor::Format"
+      // "escape": "editor::Format"
     }
   },
   {
