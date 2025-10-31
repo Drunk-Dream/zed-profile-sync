@@ -1,0 +1,58 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+      "ctrl-e": "editor::Cancel"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+      "ctrl-i": "editor::ShowCompletions",
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "ctrl-f": "vim::NextWordStart",
+      "alt-f": "vim::Right",
+      "ctrl-b": "vim::PreviousWordStart",
+      "alt-b": "vim::Left"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !menu",
+    "bindings": {
+      "enter": "command_palette::Toggle",
+      "L": "vim::EndOfLineDownward",
+      "H": "vim::StartOfLineDownward"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f m": "editor::Format",
+      "escape": "editor::Format"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      ">": ["workspace::SendKeystrokes", "> g v"],
+      "<": ["workspace::SendKeystrokes", "< g v"]
+    }
+  }
+]
