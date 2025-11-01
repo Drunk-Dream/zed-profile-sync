@@ -81,18 +81,6 @@
       ]
     }
   },
-  "lsp": {
-    "basepyright": {
-      "settings": {
-        "analysis": {
-          "diagnosticSeverityOverrides": {
-            "reportUnknownMemberType": "none",
-            "reportAny": "none"
-          }
-        }
-      }
-    }
-  },
   // =============== M ===============
   "minimap": {
     "show": "auto"
