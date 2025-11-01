@@ -7,9 +7,24 @@
 // from the command palette.
 [
   {
+    "bindings": {
+      "f11": "debugger::StepInto"
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
+      // ... or other keybindings
     }
   },
   {
@@ -25,26 +40,51 @@
     "bindings": {
       // "j k": "vim::NormalBefore"
       "ctrl-i": "editor::ShowCompletions",
-      "shift-y": ["workspace::SendKeystrokes", "y $"],
       "ctrl-f": "vim::NextWordStart",
-      "alt-f": "vim::Right",
       "ctrl-b": "vim::PreviousWordStart",
-      "alt-b": "vim::Left"
+      "ctrl-j": "vim::Down",
+      "ctrl-k": "vim::Up",
+      "ctrl-h": "vim::Left",
+      "ctrl-l": "vim::Right"
     }
   },
   {
     "context": "Editor && VimControl && !menu",
     "bindings": {
       "enter": "command_palette::Toggle",
-      "L": "vim::EndOfLineDownward",
-      "H": "vim::StartOfLineDownward"
+      "shift-l": "vim::EndOfLineDownward",
+      "shift-h": "vim::StartOfLineDownward",
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward",
+      "space f o": "projects::OpenRecent",
+      "space f a": "project_symbols::Toggle",
+      "space f 1": "editor::FoldAtLevel_1",
+      "space f 2": "editor::FoldAtLevel_2",
+      "space f 3": "editor::FoldAtLevel_3",
+      "space f 4": "editor::FoldAtLevel_4",
+      "space f 5": "editor::FoldAtLevel_5",
+      "space f 6": "editor::FoldAtLevel_6",
+      "space f 7": "editor::FoldAtLevel_7",
+      "space f 8": "editor::FoldAtLevel_8",
+      "space f 9": "editor::FoldAtLevel_9",
+      "space t t": "project_panel::ToggleFocus",
+      "space b": "workspace::ToggleLeftDock",
+      "space B": "workspace::ToggleRightDock",
+      "alt-h": "workspace::ActivatePaneLeft",
+      "alt-j": "workspace::ActivatePaneDown",
+      "alt-k": "workspace::ActivatePaneUp",
+      "alt-l": "workspace::ActivatePaneRight"
     }
   },
   {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
       "space f f": "file_finder::Toggle",
-      "space f m": "editor::Format"
+      "space f m": "editor::Format",
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "g r": "editor::FindAllReferences",
+      "] b": "vim::GoToTab",
+      "[ b": "vim::GoToPreviousTab"
       // "escape": "editor::Format"
     }
   },
@@ -52,7 +92,32 @@
     "context": "Editor && vim_mode == visual && !menu",
     "bindings": {
       ">": ["workspace::SendKeystrokes", "> g v"],
-      "<": ["workspace::SendKeystrokes", "< g v"]
+      "<": ["workspace::SendKeystrokes", "< g v"],
+      "alt-s": "vim::PushAddSurrounds"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "alt-f": "editor::AcceptPartialEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "alt-f": "editor::AcceptPartialEditPrediction"
+    }
+  },
+  {
+    "context": "debugger_stopped",
+    "bindings": {
+      "f10": "debugger::StepOver"
+    }
+  },
+  {
+    "context": "!debugger_stopped",
+    "bindings": {
+      "f11": "zed::ToggleFullScreen"
     }
   }
 ]

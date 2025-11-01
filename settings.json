@@ -88,7 +88,7 @@
   // =============== R ===============
   "relative_line_numbers": true,
   // =============== S ===============
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   // =============== T ===============
   "tabs": {
     "file_icons": true,
