@@ -41,11 +41,13 @@
       // "j k": "vim::NormalBefore"
       "ctrl-i": "editor::ShowCompletions",
       "ctrl-f": "vim::NextWordStart",
+      "alt-f": "vim::WrappingRight",
       "ctrl-b": "vim::PreviousWordStart",
+      "alt-b": "vim::WrappingLeft",
       "ctrl-j": "vim::Down",
       "ctrl-k": "vim::Up",
-      "ctrl-h": "vim::Left",
-      "ctrl-l": "vim::Right",
+      // "ctrl-h": "vim::Left",
+      // "ctrl-l": "vim::Right",
       "escape": ["action::Sequence", ["editor::Format", "vim::NormalBefore"]]
     }
   },
@@ -99,27 +101,15 @@
     }
   },
   {
-    "context": "Editor && edit_prediction_conflict",
-    "bindings": {
-      "alt-f": "editor::AcceptPartialEditPrediction"
-    }
-  },
-  {
-    "context": "Editor && edit_prediction",
-    "bindings": {
-      "alt-f": "editor::AcceptPartialEditPrediction"
-    }
-  },
-  {
     "context": "debugger_stopped",
     "bindings": {
       "f10": "debugger::StepOver"
     }
-  },
-  {
-    "context": "!debugger_stopped",
-    "bindings": {
-      "f11": "zed::ToggleFullScreen"
-    }
   }
+  // {
+  //   "context": "!debugger_stopped",
+  //   "bindings": {
+  //     "f11": "zed::ToggleFullScreen"
+  //   }
+  // }
 ]
