@@ -45,7 +45,8 @@
       "ctrl-j": "vim::Down",
       "ctrl-k": "vim::Up",
       "ctrl-h": "vim::Left",
-      "ctrl-l": "vim::Right"
+      "ctrl-l": "vim::Right",
+      "escape": ["action::Sequence", ["editor::Format", "vim::NormalBefore"]]
     }
   },
   {
@@ -73,7 +74,8 @@
       "alt-h": "workspace::ActivatePaneLeft",
       "alt-j": "workspace::ActivatePaneDown",
       "alt-k": "workspace::ActivatePaneUp",
-      "alt-l": "workspace::ActivatePaneRight"
+      "alt-l": "workspace::ActivatePaneRight",
+      "space t s": "task::Spawn"
     }
   },
   {
