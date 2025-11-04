@@ -15,7 +15,7 @@
     "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-pro"
+      "model": "gemini-2.5-flash"
     },
     "model_parameters": []
   },
@@ -89,6 +89,7 @@
   "relative_line_numbers": true,
   // =============== S ===============
   "show_edit_predictions": true,
+  "show_signature_help_after_edits": true,
   // =============== T ===============
   "tabs": {
     "file_icons": true,

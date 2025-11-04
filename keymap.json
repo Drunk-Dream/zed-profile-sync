@@ -46,6 +46,7 @@
       "alt-b": "vim::WrappingLeft",
       "ctrl-j": "vim::Down",
       "ctrl-k": "vim::Up",
+      "ctrl-l": "editor::AcceptPartialEditPrediction",
       // "ctrl-h": "vim::Left",
       // "ctrl-l": "vim::Right",
       "escape": ["action::Sequence", ["editor::Format", "vim::NormalBefore"]]
@@ -77,7 +78,8 @@
       "alt-j": "workspace::ActivatePaneDown",
       "alt-k": "workspace::ActivatePaneUp",
       "alt-l": "workspace::ActivatePaneRight",
-      "space t s": "task::Spawn"
+      "space t s": "task::Spawn",
+      "space p": "pane::TogglePinTab"
     }
   },
   {
@@ -105,11 +107,19 @@
     "bindings": {
       "f10": "debugger::StepOver"
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu && editor_agent_diff",
+    "bindings": {
+      "space y": "agent::Keep",
+      "space n": "agent::Reject"
+    }
+  },
+  {
+    "context": "AgentDiff",
+    "bindings": {
+      "space y": "agent::Keep",
+      "space n": "agent::Reject"
+    }
   }
-  // {
-  //   "context": "!debugger_stopped",
-  //   "bindings": {
-  //     "f11": "zed::ToggleFullScreen"
-  //   }
-  // }
 ]
