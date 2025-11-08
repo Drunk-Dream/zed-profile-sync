@@ -55,13 +55,7 @@
     "background_coloring": "indent_aware"
   },
   // =============== L ===============
-  "languages": {
-    "Python": {
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      }
-    }
-  },
+  "languages": {},
   "language_models": {
     "google": {
       "api_url": "https://gemini.drudream.top",
@@ -90,6 +84,17 @@
   // =============== S ===============
   "show_edit_predictions": true,
   "show_signature_help_after_edits": true,
+  "ssh_connections": [
+    {
+      "host": "dmh_node3",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/public/home/dongmh/STDB/3D_NAND_RAD/./"]
+        }
+      ]
+    }
+  ],
   // =============== T ===============
   "tabs": {
     "file_icons": true,
