@@ -79,7 +79,8 @@
       "alt-k": "workspace::ActivatePaneUp",
       "alt-l": "workspace::ActivatePaneRight",
       "space t s": "task::Spawn",
-      "space p": "pane::TogglePinTab"
+      "space p": "pane::TogglePinTab",
+      "space j": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -88,7 +89,7 @@
       "space f f": "file_finder::Toggle",
       "space f m": "editor::Format",
       "shift-y": ["workspace::SendKeystrokes", "y $"],
-      "g r": "editor::FindAllReferences",
+      // "g r": "editor::FindAllReferences",
       "] b": "vim::GoToTab",
       "[ b": "vim::GoToPreviousTab"
       // "escape": "editor::Format"
