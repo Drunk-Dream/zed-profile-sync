@@ -32,7 +32,8 @@
     "bindings": {
       "tab": "editor::ContextMenuNext",
       "shift-tab": "editor::ContextMenuPrevious",
-      "ctrl-e": "editor::Cancel"
+      "ctrl-e": "editor::Cancel",
+      "alt-f": "vim::WrappingRight"
     }
   },
   {

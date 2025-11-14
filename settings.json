@@ -80,7 +80,7 @@
     "show": "auto"
   },
   // =============== R ===============
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   // =============== S ===============
   "show_edit_predictions": true,
   "show_signature_help_after_edits": true,
